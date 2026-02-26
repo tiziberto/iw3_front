@@ -3,7 +3,7 @@ import type { Orden, Conciliacion } from '../types';
 
 // Se utiliza el puerto 8080 configurado en tu Backend de Spring Boot [cite: 2, 14]
 const instance = axios.create({
-  baseURL: "/",
+  baseURL: "/api/v1",
   headers: {
     "Content-Type": "application/json",
   },
@@ -51,3 +51,4 @@ export default {
 
 
 };
+
