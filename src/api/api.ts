@@ -2,8 +2,12 @@ import axios from "axios";
 import type { Orden, Conciliacion } from '../types';
 
 // Se utiliza el puerto 8080 configurado en tu Backend de Spring Boot [cite: 2, 14]
-const instance = axios.create({
-  baseURL: "http://localhost:8080/api/v1"
+const api = axios.create({
+  // Cambia esto para que use la ruta relativa que Nginx redirigirá
+  baseURL: "/", 
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 // Interceptor para inyectar el Token JWT en cada petición según la configuración de seguridad [cite: 13]
@@ -45,6 +49,7 @@ export default {
   // Administración de usuarios y roles según requerimiento 
   getUsers: () => instance.get('/users'),
   updateUser: (user: any) => instance.put('/users/update', user)
+
 
 
 };
