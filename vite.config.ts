@@ -7,4 +7,8 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true })
   ],
+  base: '/', // Asegura que las rutas de assets sean relativas a la raíz
+  build: {
+    outDir: 'dist',
+  }
 });
