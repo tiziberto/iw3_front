@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Orden, Conciliacion } from "@/types";
 
 const api = axios.create({
-  baseURL: "/api/v1", // Ajustado para el proxy de Nginx
+  baseURL: "/", // Ajustado para el proxy de Nginx
   headers: {
     "Content-Type": "application/json",
   },
@@ -28,3 +28,4 @@ export default {
   updateUser: (user: any) => api.put('/users/update', user),
   post: api.post, // Esto arreglará el error en auth.ts
 };
+
