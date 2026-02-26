@@ -3,7 +3,6 @@ import type { Orden, Conciliacion } from '../types';
 
 // Se utiliza el puerto 8080 configurado en tu Backend de Spring Boot [cite: 2, 14]
 const api = axios.create({
-  // Cambia esto para que use la ruta relativa que Nginx redirigirá
   baseURL: "/", 
   headers: {
     "Content-Type": "application/json",
@@ -53,3 +52,4 @@ export default {
 
 
 };
+
