@@ -18,7 +18,7 @@
     </v-row>
 
     <div class="mb-8">
-      <h1 class="text-h3 font-weight-black text-white mb-4">MONITOR <span class="text-primary">SCADA</span></h1>
+      <h1 class="text-h3 font-weight-black text-white mb-4">MONITOR <span class="text-primary">CARGAS</span></h1>
       
       <v-row dense>
         <v-col cols="12" md="6">
@@ -162,11 +162,6 @@
               >
                 <v-icon>mdi-file-pdf-box</v-icon>
                 <v-tooltip activator="parent" location="top">Descargar Conciliación</v-tooltip>
-              </v-btn>
-
-              <v-btn icon color="primary" variant="tonal" :to="`/ordenes/${orden?.numeroOrden}`">
-                <v-icon>mdi-eye</v-icon>
-                <v-tooltip activator="parent" location="top">Ver Detalle</v-tooltip>
               </v-btn>
             </div>
 
@@ -338,3 +333,4 @@ onUnmounted(() => {
 .custom-search :deep(.v-field__input) { color: white !important; }
 
 </style>
+
