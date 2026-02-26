@@ -217,7 +217,7 @@ const filteredOrders = computed(() => {
   }
 
   if (filterStatus.value !== 'Todos') {
-    const statusId = parseInt(filterStatus.value.split(':')[0]);
+    const statusId = parseInt((filterStatus.value || "").split(':')[0]);
     orders = orders.filter(o => o._estadoId === statusId);
   }
 
@@ -336,4 +336,5 @@ onUnmounted(() => {
 .border-thin { border: 1px solid rgba(255,255,255,0.1); }
 .alarm-border { border: 1px solid #f85149 !important; box-shadow: 0 0 10px rgba(248, 81, 73, 0.2); }
 .custom-search :deep(.v-field__input) { color: white !important; }
+
 </style>
